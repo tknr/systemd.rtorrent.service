@@ -1,3 +1,3 @@
 #!/bin/bash -x
 cd `dirname $0`
-cp rtorrent@.service /etc/systemd/system/
+cp -f rtorrent@.service /etc/systemd/system/
