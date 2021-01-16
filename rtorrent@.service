@@ -1,5 +1,5 @@
 [Unit]
-Description=rTorrent
+Description=rTorrent with tmux
 Requires=network.target local-fs.target
 
 [Service]
