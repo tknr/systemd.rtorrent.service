@@ -5,13 +5,13 @@ Requires=network.target local-fs.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-#KillMode=none
 KillMode=control-group
 KillSignal=SIGTERM
 User=%I
 ExecStart=/usr/bin/tmux new-session -s rtorrent -n rtorrent -d rtorrent
 ExecStop=/usr/bin/tmux send-keys -t rtorrent:rtorrent C-q
 WorkingDirectory=/home/%I/
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
